@@ -1,0 +1,61 @@
+<mvc:View
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m"
+    controllerName="inflexion.controller.Products">
+    <Page title="Products">
+        <content>
+            <VBox class="sapUiSmallMargin sapUiMediumMarginTop" justifyContent="Center" alignItems="Center">
+                <Table
+                    id="productsTable"
+                    items="{
+                        path: '/products'
+                    }"
+                    class="sapUiResponsiveMargin"
+                    width="auto">
+                    <headerToolbar>
+                        <Toolbar>
+                            <Title text="Product List" level="H2" />
+                        </Toolbar>
+                    </headerToolbar>
+                    <columns>
+                        <Column>
+                            <Text text="ID" />
+                        </Column>
+                        <Column>
+                            <Text text="Name" />
+                        </Column>
+                        <Column>
+                            <Text text="Price" />
+                        </Column>
+                        <Column>
+                            <Text text="Supplier" />
+                        </Column>
+                        <Column>
+                            <Text text="Dimensions" />
+                        </Column>
+                        <Column>
+                            <Text text="Weight" />
+                        </Column>
+                    </columns>
+                    <items>
+                        <ColumnListItem>
+                            <cells>
+                                <Text text="{id}" />
+                                <Text text="{name}" />
+                                <Text text="{price}" />
+                                <Text text="{supplier}" />
+                                <Text text="{dimensions}" />
+                                <Text text="{weight}" />
+                            </cells>
+                        </ColumnListItem>
+                    </items>
+                </Table>
+                <Button
+                    text="Back to Home"
+                    type="Emphasized"
+                    press="onBackToHome"
+                    class="sapUiSmallMarginTop" />
+            </VBox>
+        </content>
+    </Page>
+</mvc:View>

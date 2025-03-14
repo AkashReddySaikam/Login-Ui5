@@ -1,0 +1,36 @@
+{
+    "employees": [
+        {
+            "empId": "E001",
+            "name": "Rahul",
+            "email": "rahul@example.com",
+            "role": "Manager",
+            "location": "Bangalore",
+            "salary": "₹1,20,000"
+        },
+        {
+            "empId": "E002",
+            "name": "Priya",
+            "email": "priya@example.com",
+            "role": "Team Lead",
+            "location": "Mumbai",
+            "salary": "₹90,000"
+        },
+        {
+            "empId": "E003",
+            "name": "Ankit",
+            "email": "ankit@example.com",
+            "role": "Developer",
+            "location": "Pune",
+            "salary": "₹75,000"
+        },
+        {
+            "empId": "E004",
+            "name": "Sneha",
+            "email": "sneha@example.com",
+            "role": "HR",
+            "location": "Bangalore",
+            "salary": "₹60,000"
+        }
+    ]
+}

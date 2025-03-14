@@ -1,0 +1,84 @@
+{
+    "products": [
+        {
+            "id": "P001",
+            "name": "10\" Portable DVD Player",
+            "price": "449.99 EUR",
+            "supplier": "TechGadgets Inc.",
+            "dimensions": "24 x 19.5 x 29 cm",
+            "weight": "2.5 kg"
+        },
+        {
+            "id": "P002",
+            "name": "Wireless Bluetooth Headphones",
+            "price": "99.99 EUR",
+            "supplier": "AudioTech Ltd.",
+            "dimensions": "18 x 15 x 6 cm",
+            "weight": "0.3 kg"
+        },
+        {
+            "id": "P003",
+            "name": "Smart Home Security Camera",
+            "price": "129.99 EUR",
+            "supplier": "SecureHome Corp.",
+            "dimensions": "10 x 10 x 5 cm",
+            "weight": "0.5 kg"
+        },
+        {
+            "id": "P004",
+            "name": "4K Ultra HD Smart TV",
+            "price": "799.99 EUR",
+            "supplier": "VisionTech Inc.",
+            "dimensions": "145 x 83 x 5 cm",
+            "weight": "18.2 kg"
+        },
+        {
+            "id": "P005",
+            "name": "Gaming Laptop",
+            "price": "1499.99 EUR",
+            "supplier": "GameMaster Ltd.",
+            "dimensions": "36 x 26 x 2.5 cm",
+            "weight": "2.8 kg"
+        },
+        {
+            "id": "P006",
+            "name": "Wireless Charging Pad",
+            "price": "29.99 EUR",
+            "supplier": "ChargeTech Inc.",
+            "dimensions": "10 x 10 x 1 cm",
+            "weight": "0.1 kg"
+        },
+        {
+            "id": "P007",
+            "name": "Noise-Cancelling Headphones",
+            "price": "199.99 EUR",
+            "supplier": "AudioPro Ltd.",
+            "dimensions": "20 x 18 x 7 cm",
+            "weight": "0.4 kg"
+        },
+        {
+            "id": "P008",
+            "name": "Smartwatch with Fitness Tracker",
+            "price": "249.99 EUR",
+            "supplier": "FitTech Inc.",
+            "dimensions": "4 x 4 x 1 cm",
+            "weight": "0.05 kg"
+        },
+        {
+            "id": "P009",
+            "name": "Portable Bluetooth Speaker",
+            "price": "79.99 EUR",
+            "supplier": "SoundWave Ltd.",
+            "dimensions": "15 x 15 x 8 cm",
+            "weight": "0.6 kg"
+        },
+        {
+            "id": "P010",
+            "name": "External SSD 1TB",
+            "price": "149.99 EUR",
+            "supplier": "DataTech Inc.",
+            "dimensions": "8 x 5 x 1 cm",
+            "weight": "0.1 kg"
+        }
+    ]
+}

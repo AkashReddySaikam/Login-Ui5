@@ -1,0 +1,8 @@
+specVersion: "2.2"
+metadata:
+  name: "sap-ui5-login"
+type: application
+server:
+  customMiddleware:
+  - name: ui5-middleware-livereload
+    afterMiddleware: compression

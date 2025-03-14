@@ -1,0 +1,109 @@
+{
+    "_version": "1.12.0",
+    "sap.ui5": {
+      "rootView": {
+        "viewName": "inflexion.view.Login",
+        "type": "XML"
+      },
+      "dependencies": {
+        "minUI5Version": "1.60.0",
+        "libs": {
+          "sap.m": {},
+          "sap.ui.core": {},
+          "sap.ui.layout": {}
+        }
+      },
+      "routing": {
+        "config": {
+          "routerClass": "sap.m.routing.Router",
+          "viewType": "XML",
+          "controlId": "app",
+          "controlAggregation": "pages",
+          "async": true
+        },
+        "routes": [
+          {
+            "pattern": "",
+            "name": "login",
+            "target": "login"
+          },
+          {
+            "pattern": "signup",
+            "name": "signup",
+            "target": "signup"
+          },
+          {
+            "pattern": "dashboard",
+            "name": "dashboard",
+            "target": "dashboard"
+          },
+          {
+            "pattern": "products",
+            "name": "products",
+            "target": "products"
+        },
+        {
+            "pattern": "users",
+            "name": "users",
+            "target": "users"
+        },
+        {
+            "pattern": "userDetails/{userId}",
+            "name": "userDetails",
+            "target": "userDetails"
+        },
+        {
+          "pattern": "gridTable",
+          "name": "gridTable",
+          "target": "gridTable"
+        }
+        ],
+        "targets": {
+          "login": {
+            "viewName": "Login",
+            "viewPath": "inflexion.view",
+            "viewType": "XML",
+            "viewLevel": 1
+          },
+          "signup": {
+            "viewName": "Signup",
+            "viewPath": "inflexion.view",
+            "viewType": "XML",
+            "viewLevel": 2
+          },
+          "dashboard": {
+            "viewName": "Dashboard",
+            "viewPath": "inflexion.view",
+            "viewType": "XML",
+            "viewLevel": 3
+          },
+          "products": {
+            "viewName": "Products",
+            "viewPath": "inflexion.view",
+            "viewType": "XML",
+            "viewLevel": 4
+        },
+        "users": {
+            "viewName": "Users",
+            "viewPath": "inflexion.view",
+            "viewType": "XML",
+            "viewLevel": 5
+        },
+        "userDetails": {
+            "viewName": "UserDetails",
+            "viewPath": "inflexion.view",
+            "viewType": "XML",
+            "viewLevel": 6
+        },
+        "gridTable": {
+          "viewName": "GridTable",
+          "viewPath": "inflexion.view",
+          "viewType": "XML",
+          "viewLevel": 7
+        }
+
+        }
+      }
+    }
+  }
+  

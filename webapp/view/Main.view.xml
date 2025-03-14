@@ -1,0 +1,12 @@
+<mvc:View
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m"
+    controllerName="inflexion.controller.Main">
+
+    <Page title="Welcome">
+        <content>
+            <Text text="Welcome to the Main Page!"/>
+        </content>
+    </Page>
+
+</mvc:View>

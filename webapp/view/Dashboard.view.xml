@@ -1,0 +1,45 @@
+<mvc:View
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m"
+    controllerName="inflexion.controller.Dashboard">
+    
+    <Page title="Dashboard">
+        <content>
+            <VBox class="sapUiSmallMargin sapUiMediumMarginTop" justifyContent="Center" alignItems="Center">
+                
+                <Title text="Welcome to the Dashboard!" level="H1" class="sapUiTinyMarginBottom" />
+                
+                <ObjectHeader title="User Dashboard" icon="images/Logo.jpg"/>
+                
+                <Panel headerText="User Information" class="sapUiResponsiveMargin" width="80%">
+                    <content>
+                        <VBox>
+                            <Text text="👤 Name: Akash" />
+                            <Text text="📧 Email: ak@example.com" />
+                            <Text text="📅 Last Login: 13 March 2025" />
+                        </VBox>
+                    </content>
+                </Panel>
+                
+                <!-- Action buttons in one row -->
+                <HBox class="sapUiSmallMarginTop" justifyContent="Center" alignItems="Center">
+                    <Button text="Products" type="Accept" press="onProducts" class="sapUiSmallMarginEnd"/>
+                    <Button text="Users" type="Emphasized" press="onNavigateToUsers" class="sapUiSmallMarginEnd"/>
+                    <Button text="Employees" type="Emphasized" press="onEmployee" class="sapUiSmallMarginEnd"/>
+                </HBox>
+                
+                <!-- Logout button in separate row -->
+                <HBox class="sapUiMediumMarginTop" justifyContent="Center" alignItems="Center">
+                    <Button text="Logout" type="Reject" press="onLogout" width="15rem"/>
+                </HBox>
+            </VBox>
+        </content>
+        
+        <!-- Alternative: Place logout in footer -->
+        
+    </Page>
+</mvc:View>
+
+
+
+

@@ -1,0 +1,21 @@
+<mvc:View
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m"
+    controllerName="inflexion.controller.UserDetails">
+    
+    <Page title="User Details">
+        <content>
+            <VBox class="sapUiSmallMargin sapUiMediumMarginTop" alignItems="Center" justifyContent="Center" border="Black">
+                <Title text="User Information" level="H2" class="sapUiTinyMarginBottom"/>
+                
+                <Text text="🆔 ID: {/id}"/>
+                <Text text="👤 Name: {/name}"/>
+                <Text text="📧 Email: {/email}"/>
+                <Text text="⏳ Last Login: {/lastLogin}"/>
+                <Text text="🎭 Role: {/role}"/>
+
+                <Button text="Back to Users" press="onBackToUsers" class="sapUiSmallMarginTop"/>
+            </VBox>
+        </content>
+    </Page>
+</mvc:View>

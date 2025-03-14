@@ -1,0 +1,57 @@
+<mvc:View
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m"
+    controllerName="inflexion.controller.Users">
+    <Page title="UseList">
+        <content>
+            <VBox class="sapUiSmallMargin sapUiMediumMarginTop" justifyContent="Center" alignItems="Center">
+                <Title text="Welcome to the Community!" level="H1" class="sapUiTinyMarginBottom" />
+                
+<Table
+    id="usersTable"
+    items="{/users}"
+    mode="SingleSelectMaster"
+    class="sapUiResponsiveMargin"
+    width="auto"
+    itemPress=".onUserSelect">  
+
+    <headerToolbar>
+        <Toolbar>
+            <Title text="User List" level="H2" />
+        </Toolbar>
+    </headerToolbar>
+    
+    <columns>
+        <Column><Text text="ID" /></Column>
+        <Column><Text text="Name" /></Column>
+        <Column><Text text="Email" /></Column>
+        <Column><Text text="Last Login" /></Column>
+        <Column><Text text="Role" /></Column>
+    </columns>
+    
+    <items>
+        <ColumnListItem type="Active"> 
+            <cells>
+                <Text text="{id}" />
+                <Text text="{name}" />
+                <Text text="{email}" />
+                <Text text="{lastLogin}" />
+                <Text text="{role}" />
+            </cells>
+        </ColumnListItem>
+    </items>
+</Table>
+
+
+
+ <Button
+                    text="Back to Home"
+                    type="Emphasized"
+                    press="onBackToHome"
+                    class="sapUiSmallMarginTop" />
+
+
+            </VBox>
+        </content>
+    </Page>
+</mvc:View>

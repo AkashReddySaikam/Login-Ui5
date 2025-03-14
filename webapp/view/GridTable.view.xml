@@ -1,0 +1,87 @@
+<mvc:View
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m"
+    xmlns:t="sap.ui.table"
+    xmlns:core="sap.ui.core"
+    controllerName="inflexion.controller.GridTable">
+
+    <Page title="Employee List">
+        <content>
+            <t:Table id="gridTable"
+                     selectionMode="MultiToggle"
+                     rows="{/employees}"
+                     visibleRowCount="5">
+
+                <!-- Employee ID -->
+                <t:Column>
+                    <t:label>
+                        <Label text="Employee ID"/>
+                    </t:label>
+                    <t:template>
+                        <Text text="{empId}"/>
+                    </t:template>
+                </t:Column>
+
+                <!-- Name -->
+                <t:Column>
+                    <t:label>
+                        <Label text="Name"/>
+                    </t:label>
+                    <t:template>
+                        <Text text="{name}"/>
+                    </t:template>
+                </t:Column>
+
+                <!-- Email -->
+                <t:Column>
+                    <t:label>
+                        <Label text="Email"/>
+                    </t:label>
+                    <t:template>
+                        <Text text="{email}"/>
+                    </t:template>
+                </t:Column>
+
+                <!-- Role -->
+                <t:Column>
+                    <t:label>
+                        <Label text="Role"/>
+                    </t:label>
+                    <t:template>
+                        <Text text="{role}"/>
+                    </t:template>
+                </t:Column>
+
+                <!-- Location (Dynamically Fetched from API) -->
+                <t:Column>
+                    <t:label>
+                        <Label text="Location"/>
+                    </t:label>
+                    <t:template>
+                       <ComboBox selectedKey="{location}" items="{locationModel>/locations}">
+    <core:ListItem key="{locationModel>location}" text="{locationModel>location}" />
+</ComboBox>
+
+                    </t:template>
+                </t:Column>
+
+                <!-- Salary -->
+                <t:Column>
+                    <t:label>
+                        <Label text="Salary"/>
+                    </t:label>
+                    <t:template>
+                        <Text text="{salary}"/>
+                    </t:template>
+                </t:Column>
+
+            </t:Table>
+
+            <Button
+                text="Back to Home"
+                type="Emphasized"
+                press="onBackToHome"
+                class="sapUiSmallMarginTop" />
+        </content>
+    </Page>
+</mvc:View>

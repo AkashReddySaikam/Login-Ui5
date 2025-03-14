@@ -1,0 +1,26 @@
+<mvc:View
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m"
+    controllerName="inflexion.controller.Signup">
+    
+    <Page title="Sign Up">
+        <content>
+            <VBox class="sapUiSmallMargin">
+                <Label text="Name" />
+                <Input id="nameInput" placeholder="Enter your name" />
+
+                <Label text="Email" />
+                <Input id="emailInput" placeholder="Enter your email" type="Email" />
+
+                <Label text="Password" />
+                <Input id="passwordInput" placeholder="Enter your password" type="Password" />
+
+                <Label text="Contact" />
+                <Input id="contactInput" placeholder="Enter your contact number" />
+
+                <Button text="Create" press="onSignUp" type="Emphasized"/>
+                <Button text="Go  Back to Login" press="onNavigateToLogin"/>
+            </VBox>
+        </content>
+    </Page>
+</mvc:View>

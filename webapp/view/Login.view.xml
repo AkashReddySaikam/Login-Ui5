@@ -1,0 +1,48 @@
+<mvc:View xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" controllerName="inflexion.controller.Login">
+    <App id="app">
+        <pages>
+            <Page showHeader="false">
+                <content>
+                    <VBox class="sapUiSmallMargin" alignItems="Center" justifyContent="Center">
+                        
+                        <!-- Logo & Title (Image on top, text below) -->
+                                        <HBox class="sapUiMediumMarginBottom">
+
+    <Image src="images/Logo.jpg" width="30px" height="20px"/>
+
+    <Text text="inflexion" class="sapUiSmallMarginStart" />
+
+</HBox>
+
+                        <!-- Title -->
+                        <Title text="Login" level="H2" class="sapUiSmallMarginBottom"/>
+
+                        <!-- Login Box -->
+                        <Panel width="350px" class="sapUiContentPadding loginContainer" backgroundDesign="Translucent">
+                            <content>
+                                <VBox alignItems="Stretch" class="sapUiMediumMargin">
+                                    
+                                    <Label text="User ID:" labelFor="userId"/>
+                                    <Input id="userId" placeholder="Username" width="100%"/>
+
+                                    <Label text="Password:" labelFor="password"/>
+                                    <Input id="password" type="Password" placeholder="Password" width="100%"/>
+
+                                    <!-- Sign In Button -->
+                                    <Button text="Login" type="Emphasized" width="100%" class="sapUiMediumMarginTop" press="onLogin"/>
+
+                                    <!-- Links for Sign Up & Forgot Password -->
+                                    <HBox justifyContent="SpaceBetween" class="sapUiSmallMarginTop">
+                                        <Link text="Sign Up" press="onNavigateToSignup"/>
+                                        <Link text="Forgot Password?" press="onForgotPassword"/>
+                                    </HBox>
+
+                                </VBox>
+                            </content>
+                        </Panel>
+                    </VBox>
+                </content>
+            </Page>
+        </pages>
+    </App>
+</mvc:View>
