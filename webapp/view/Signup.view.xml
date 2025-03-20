@@ -18,9 +18,12 @@
                 <Label text="Contact" />
                 <Input id="contactInput" placeholder="Enter your contact number" />
 
-                <Button text="Create" press="onSignUp" type="Emphasized"/>
-                <Button text="Go  Back to Login" press="onNavigateToLogin"/>
+                <Button text="Create Account" press="onSignUp" type="Emphasized"/>
+                <Button text="Go Back to Login" press="onNavigateToLogin"/>
             </VBox>
         </content>
     </Page>
 </mvc:View>
+
+
+

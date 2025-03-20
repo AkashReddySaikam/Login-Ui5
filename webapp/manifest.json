@@ -10,8 +10,18 @@
         "libs": {
           "sap.m": {},
           "sap.ui.core": {},
-          "sap.ui.layout": {}
+          "sap.ui.layout": {},
+          "sap.viz": {} 
+        },
+        "sap.ui5": {
+        "resources": {
+            "css": [
+                {
+                    "uri": "css/styles.css"
+                }
+            ]
         }
+    }
       },
       "routing": {
         "config": {
@@ -56,7 +66,17 @@
           "pattern": "gridTable",
           "name": "gridTable",
           "target": "gridTable"
-        }
+        },
+        {
+          "pattern": "reve",
+          "name": "reve",
+          "target": "reve"
+        },
+        {
+          "pattern": "settings",
+          "name": "settings",
+          "target": "settings"
+      }
         ],
         "targets": {
           "login": {
@@ -95,13 +115,27 @@
             "viewType": "XML",
             "viewLevel": 6
         },
+       
+        
         "gridTable": {
           "viewName": "GridTable",
           "viewPath": "inflexion.view",
           "viewType": "XML",
           "viewLevel": 7
+        },
+        "reve": {
+          "viewName": "Revenue",
+          "viewPath": "inflexion.view",
+          "viewType": "XML",
+          "viewLevel": 8
+        },
+        "settings": {
+          "viewName": "Settings",
+          "viewPath": "inflexion.view",
+          "viewType": "XML",
+          "viewLevel": 9
         }
-
+        
         }
       }
     }

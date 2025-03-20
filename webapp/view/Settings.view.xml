@@ -1,0 +1,68 @@
+<mvc:View
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m"
+     xmlns:core="sap.ui.core"
+    controllerName="inflexion.controller.Settings">
+    
+    <Page title="Settings">
+        <content>
+            <VBox class="sapUiSmallMargin">
+
+                <!-- Account Privacy -->
+                <Label text="Account Privacy"/>
+           <SegmentedButton id="privacyToggle">
+    <Button text="Public">
+        <customData>
+            <core:CustomData key="privacy" value="public"/>
+        </customData>
+    </Button>
+    <Button text="Private">
+        <customData>
+            <core:CustomData key="privacy" value="private"/>
+        </customData>
+    </Button>
+</SegmentedButton>
+
+                <!-- Notification Settings -->
+                <Label text="Notifications"/>
+                <Switch id="notificationSwitch" state="true" class="sapUiSmallMarginBottom"/>
+
+                <!-- Language Selection -->
+                <Label text="Language"/>
+                <Select id="languageSelect">
+                    <items>
+                        <core:Item key="en" text="English"/>
+                        <core:Item key="fr" text="French"/>
+                        <core:Item key="es" text="Spanish"/>
+                        <core:Item key="de" text="German"/>
+                    </items>
+                </Select>
+
+                <!-- Theme Selection -->
+                <Label text="Theme"/>
+                <SegmentedButton selectedKey="light" id="themeToggle">
+                    <Button text="Light Mode" key="light"/>
+                    <Button text="Dark Mode" key="dark"/>
+                </SegmentedButton>
+
+                <!-- Change Password Section -->
+                <Label text="Current Password"/>
+                <Input id="currentPassword" type="Password" placeholder="Enter current password"/>
+
+                <Label text="New Password"/>
+                <Input id="newPassword" type="Password" placeholder="Enter new password"/>
+
+                <Label text="Confirm New Password"/>
+                <Input id="confirmPassword" type="Password" placeholder="Re-enter new password"/>
+
+                <!-- Save & Back Buttons -->
+                <HBox class="sapUiSmallMargin" justifyContent="SpaceBetween">
+                    <Button text="Save Changes" press="onSaveSettings" class="sapUiSmallMarginEnd" width="80%"/>
+                    <Button text="Back to Dashboard" press="onBackToDashboard" width="100%"/>
+                </HBox>
+
+            </VBox>
+        </content>
+    </Page>
+</mvc:View>
+

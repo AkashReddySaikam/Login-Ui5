@@ -1,6 +1,6 @@
 specVersion: "2.2"
 metadata:
-  name: "sap-ui5-login"
+  name:"inflexion"
 type: application
 server:
   customMiddleware:

@@ -1,10 +1,23 @@
 {
-    "name": "page-walkthrough",
+    "name": "inflexion",
     "version": "1.0.0",
     "description": "SAP UI5 Login Page with Routing",
-    "scripts": {
-      "start": "ui5 serve -o index.html"
-    },
+   "scripts": {
+    "clean": "rimraf dist coverage",
+    "build": "ui5 build --clean-dest",
+    "build:opt": "ui5 build self-contained --clean-dest --all",
+    "start": "ui5 serve --port 5501 -o index.html",
+    "start-cdn": "ui5 serve --port 5501 -o index-cdn.html",
+    "start:dist": "npm start -- --config ui5-dist.yaml",
+    "start:dist-cdn": "npm run start-cdn -- --config ui5-dist.yaml",
+    "lint": "eslint webapp",
+    "karma": "karma start",
+    "karma-ci": "karma start karma-ci.conf.js",
+    "karma-ci-cov": "karma start karma-ci-cov.conf.js",
+    "test": "npm run lint && npm run karma-ci-cov",
+    "wdi5": "wdio run ./webapp/test/e2e/wdio.conf.js"
+},
+
     "dependencies": {},
     "devDependencies": {
       "@ui5/cli": "^3.0.0"

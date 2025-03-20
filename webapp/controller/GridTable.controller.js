@@ -74,41 +74,45 @@ sap.ui.define([
     "sap/m/MessageToast"
 ], function (Controller, JSONModel, MessageToast) {
     "use strict";
-
+    
     return Controller.extend("inflexion.controller.GridTable", {
         onInit: function () {
             var oModel = new JSONModel("model/employees.json");
             var that = this;
-
+            
             // Load JSON data
             oModel.attachRequestCompleted(function () {
                 var oData = oModel.getData();
                 
-                // Extract all locations from employee data (NOT unique, use full list)
-                var allLocations = oData.employees.map(emp => ({ location: emp.location }));
-
-                // Add the full locations list to the model
+                // Extract all locations from employee data
+                var allLocations = [];
+                oData.employees.forEach(function(emp) {
+                    allLocations.push({ location: emp.location });
+                });
+                
+                // Add the locations list to the model
                 oData.locations = allLocations;
                 
                 // Update Model with all locations
                 oModel.setData(oData);
+                console.log("Model data:", oData); // Debug output
                 that.getView().setModel(oModel);
             });
         },
-
+        
         onRowSelect: function (oEvent) {
             var oTable = this.getView().byId("gridTable");
             var aSelectedIndices = oTable.getSelectedIndices();
-
+            
             if (aSelectedIndices.length > 0) {
                 MessageToast.show("Selected Rows: " + aSelectedIndices.length);
             }
         },
-
+        
         onBackToHome: function () {
             // Navigate to the Login page
             var oRouter = sap.ui.core.UIComponent.getRouterFor(this);
-            oRouter.navTo("login");
+            oRouter.navTo("dashboard");
             MessageToast.show("Navigating back to Home...");
         }
     });

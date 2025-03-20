@@ -4,14 +4,15 @@
     xmlns:t="sap.ui.table"
     xmlns:core="sap.ui.core"
     controllerName="inflexion.controller.GridTable">
-
+    
     <Page title="Employee List">
         <content>
             <t:Table id="gridTable"
-                     selectionMode="MultiToggle"
-                     rows="{/employees}"
-                     visibleRowCount="5">
-
+                    selectionMode="MultiToggle"
+                    rows="{/employees}"
+                    visibleRowCount="5"
+                    selectionChange="onRowSelect">
+                
                 <!-- Employee ID -->
                 <t:Column>
                     <t:label>
@@ -21,7 +22,7 @@
                         <Text text="{empId}"/>
                     </t:template>
                 </t:Column>
-
+                
                 <!-- Name -->
                 <t:Column>
                     <t:label>
@@ -31,7 +32,7 @@
                         <Text text="{name}"/>
                     </t:template>
                 </t:Column>
-
+                
                 <!-- Email -->
                 <t:Column>
                     <t:label>
@@ -41,7 +42,7 @@
                         <Text text="{email}"/>
                     </t:template>
                 </t:Column>
-
+                
                 <!-- Role -->
                 <t:Column>
                     <t:label>
@@ -51,20 +52,19 @@
                         <Text text="{role}"/>
                     </t:template>
                 </t:Column>
-
-                <!-- Location (Dynamically Fetched from API) -->
+                
+                <!-- Location -->
                 <t:Column>
                     <t:label>
                         <Label text="Location"/>
                     </t:label>
                     <t:template>
-                       <ComboBox selectedKey="{location}" items="{locationModel>/locations}">
-    <core:ListItem key="{locationModel>location}" text="{locationModel>location}" />
-</ComboBox>
-
+                        <ComboBox selectedKey="{location}" items="{/locations}">
+                            <core:Item key="{location}" text="{location}" />
+                        </ComboBox>
                     </t:template>
                 </t:Column>
-
+                
                 <!-- Salary -->
                 <t:Column>
                     <t:label>
@@ -74,9 +74,9 @@
                         <Text text="{salary}"/>
                     </t:template>
                 </t:Column>
-
+            
             </t:Table>
-
+            
             <Button
                 text="Back to Home"
                 type="Emphasized"

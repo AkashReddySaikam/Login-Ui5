@@ -42,7 +42,7 @@ sap.ui.define([
         },
         onBackToHome: function () {
                    var oRouter = sap.ui.core.UIComponent.getRouterFor(this);
-                   oRouter.navTo("login");
+                   oRouter.navTo("dashboard");
                       MessageToast.show("Navigating back to Home...");
                   }
         

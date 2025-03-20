@@ -1,21 +1,58 @@
 <mvc:View
     xmlns:mvc="sap.ui.core.mvc"
     xmlns="sap.m"
+    xmlns:f="sap.f"
+    xmlns:card="sap.f.cards"
+    xmlns:layout="sap.ui.layout"
     controllerName="inflexion.controller.UserDetails">
     
     <Page title="User Details">
         <content>
-            <VBox class="sapUiSmallMargin sapUiMediumMarginTop" alignItems="Center" justifyContent="Center" border="Black">
-                <Title text="User Information" level="H2" class="sapUiTinyMarginBottom"/>
+            <!-- Main Container for Alignment -->
+            <layout:VerticalLayout class="sapUiSmallMargin" width="100%">
                 
-                <Text text="🆔 ID: {/id}"/>
-                <Text text="👤 Name: {/name}"/>
-                <Text text="📧 Email: {/email}"/>
-                <Text text="⏳ Last Login: {/lastLogin}"/>
-                <Text text="🎭 Role: {/role}"/>
+                <!-- User Information Card -->
+                <f:Card class="sapUiSmallMargin" width="100%">
+                    <f:header>
+                        <card:Header title="User Information" subtitle="Details of the selected user"/>
+                    </f:header>
+                    <f:content>
+                            <VBox class="sapUiSmallMargin">
+                            <Text text="🆔 ID: {/id}" class="sapUiTinyMarginBottom"/>
+                            <Text text="👤 Name: {/name}" class="sapUiTinyMarginBottom"/>
+                            <Text text="📧 Email: {/email}" class="sapUiTinyMarginBottom"/>
+                            <Text text="⏳ Last Login: {path: '/lastLogin', formatter: '.formatDate'}" class="sapUiTinyMarginBottom"/>
+                            <Text text="🎭 Role: {/role}" class="sapUiTinyMarginBottom"/>
+                        </VBox>
+                    </f:content>
+                </f:Card>
 
-                <Button text="Back to Users" press="onBackToUsers" class="sapUiSmallMarginTop"/>
-            </VBox>
+                <!-- User Activity Card -->
+                <f:Card class="sapUiSmallMargin" width="100%">
+                    <f:header>
+                        <card:Header title="User Activity" subtitle="Recent activities of the user"/>
+                    </f:header>
+                    <f:content>
+                        <VBox class="sapUiSmallMargin">
+                            <layout:VerticalLayout class="sapUiTinyMarginBottom">
+                                <Label text="📊 Total Logins:" design="Bold"/>
+                                <Text text="{/totalLogins}" class="sapUiTinyMarginBegin"/>
+                            </layout:VerticalLayout>
+                            <layout:VerticalLayout class="sapUiTinyMarginBottom">
+                                <Label text="📅 Account Created:" design="Bold"/>
+                                <Text text="{path: '/accountCreated', formatter: '.formatDate'}" class="sapUiTinyMarginBegin"/>
+                            </layout:VerticalLayout>
+                            <layout:VerticalLayout class="sapUiTinyMarginBottom">
+                                <Label text="🔒 Status:" design="Bold"/>
+                                <Text text="{/status}" class="sapUiTinyMarginBegin"/>
+                            </layout:VerticalLayout>
+                        </VBox>
+                    </f:content>
+                </f:Card>
+
+                <!-- Back Button -->
+                <Button text="Back to Users" press="onBackToUsers" class="sapUiSmallMarginTop" width="100%"/>
+            </layout:VerticalLayout>
         </content>
     </Page>
 </mvc:View>

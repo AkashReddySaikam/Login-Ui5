@@ -1,0 +1,10 @@
+.loginPage {
+    background-image: url("/images/images.jpg"); /* Path to the image */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh; /* Full screen height */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

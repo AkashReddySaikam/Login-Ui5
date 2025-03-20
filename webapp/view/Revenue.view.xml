@@ -1,0 +1,57 @@
+<mvc:View xmlns:mvc="sap.ui.core.mvc"
+          xmlns="sap.m"
+          xmlns:viz="sap.viz.ui5.controls"
+          xmlns:viz.data="sap.viz.ui5.data"
+          xmlns:viz.feeds="sap.viz.ui5.controls.common.feeds"
+          xmlns:core="sap.ui.core"
+          controllerName="inflexion.controller.Revenue">
+    
+    <App>
+        <Page title="Revenue Overview">
+            <content>
+                <!-- Revenue Summary -->
+                <VBox class="sapUiSmallMargin sapUiMediumMarginTop" alignItems="Center" justifyContent="Center">
+                    <Title text="Revenue Information" level="H2" class="sapUiTinyMarginBottom"/>
+
+                    <HBox class="sapUiSmallMargin" justifyContent="Center">
+                        <!-- Total Revenue -->
+                        <VBox class="sapUiSmallMargin sapUiMediumMarginEnd">
+                            <ObjectHeader title="Total Revenue" number="{$data>/totalRevenue}" numberUnit="M" />
+                        </VBox>
+
+                        <!-- Monthly Revenue -->
+                        <VBox class="sapUiSmallMargin">
+                            <ObjectHeader title="Monthly Revenue" number="{$data>/monthlyRevenue}" numberUnit="M" />
+                        </VBox>
+                    </HBox>
+                </VBox>
+
+                <!-- Revenue Chart -->
+                <Panel headerText="Revenue Trend" class="sapUiResponsiveMargin">
+                    <content>
+                        <viz:Popover/>
+                        <viz:VizFrame id="revenueChart" height="300px" width="100%" vizType="column">
+                            <viz:dataset>
+                                <viz.data:FlattenedDataset data="{chart>/RevenueData}">
+                                    <viz.data:dimensions>
+                                        <viz.data:DimensionDefinition name="Month" value="{chart>month}" />
+                                    </viz.data:dimensions>
+                                    <viz.data:measures>
+                                        <viz.data:MeasureDefinition name="Revenue" value="{chart>revenue}" />
+                                    </viz.data:measures>
+                                </viz.data:FlattenedDataset>
+                            </viz:dataset>
+                            <viz:feeds>
+                                <viz.feeds:FeedItem uid="categoryAxis" type="Dimension" values="Month" />
+                                <viz.feeds:FeedItem uid="valueAxis" type="Measure" values="Revenue" />
+                            </viz:feeds>
+                        </viz:VizFrame>
+                    </content>
+                </Panel>
+
+                <!-- Back Button -->
+                <Button text="Back to Dashboard" press="onBackToDashboard" class="sapUiSmallMarginTop" />
+            </content>
+        </Page>
+    </App>
+</mvc:View>
